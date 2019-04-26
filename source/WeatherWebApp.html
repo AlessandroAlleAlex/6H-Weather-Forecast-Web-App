@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,500" rel="stylesheet">
+    <link rel="stylesheet" href="WeatherWebApp.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    
+    <div id="slider">
+    <header id="header">
+        <p id="upArrow" onclick="mySlideUp('slider');">&#9650;</p>
+        <p id="downArrow" onclick="mySlideDown('slider');">&#9660;</p>
+        <div id="headerDiv">
+            <div class="headLeft">
+                <h1 class="text1">Local Weather Six Hour Forecast</h1>
+                
+                <div id="mobileLocalFlex">
+                    <div>
+                        <p class="mobileLocal">Local Weather </p>
+                    </div>
+                    <div>
+                        <p class="mobileLocal">Six Hour Forecast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="headLeft">
+                <h2 class="text1">Northern California with doppler radar</h2>
+                <p id="mobileForecast">Forecast for</p>
+            </div>
+            <div id="inputDiv" class="headLeft">
+                <div>
+                    <h3 class="text1">Forecast for</h3>  
+                </div>
+                <div>
+                    <input id="textBar" type="text" value="Davis, CA">
+                </div>
+                <div>
+                    <button id="submitBtn" onclick="myFunction()">Submit</button>
+                </div>
+            </div>
+            
+            <div id="headCurrent">
+                <span class="webCurrent">
+                <div id="headerTimeFont">
+                    <p class="colorClass">current <br> </p>
+                    <p class="colorClass" id="currentHourId"></p>
+                </div>
+                </span>
+                
+                <div id="headImg">
+                    <img id="img1" src="../assets/snow.svg" alt="Broken Cloud">
+                    <span id="tabletCurrent">
+
+                        <div id="tabletCurrentFlex">
+                            
+                            <div id="tabletHeaderTimeFont">
+                                <p class="colorClass">current <br> </p>
+                                <p class="colorClass" id="tabletCurrentHourId">12PM</p>
+                            </div>
+                            <div id="tabletHr">
+
+                            </div>
+                            
+                            <div id="tabletHeadTemp">
+                                <p class="colorClass" id="tabletCurrentTempId"></p>
+                            </div>
+
+                        </div>
+                        
+                    </span>
+                </div>
+            
+                <span class="webCurrent">
+                <div id="headTemp">
+                    <p class="colorClass" id="currentTempId"></p>
+                </div>
+                </span>
+                <span id="tabletDopper">
+                <div id="tabletDopperDiv">
+                    <img class="dopperClass" id="tabletTopoFilter" src="../radarMaps/DAX_Topo_Short.jpg" alt="Topographic">
+                    <div class="dopperImg" id="animationTablet">
+                    </div>
+                    <div class="dopperImg">
+                        <img class="dopperClass" src="../radarMaps/DAX_City_Short.gif" alt="City names">
+                    </div>
+                </div>
+                </span>
+            </div>
+        </div>
+        <span id="webDopper">
+        <div id="dopperDiv">
+            <img class="dopperClass" id="topoFilter" src="../radarMaps/DAX_Topo_Short.jpg" alt="Topographic">
+            <div class="dopperImg" id="animationWeb">
+            </div>
+            <div class="dopperImg">
+                <img class="dopperClass" src="../radarMaps/DAX_City_Short.gif" alt="City names">
+            </div>
+        </div>
+        </span>
+        
+    </header>
+    </div>
+    <main>
+        <div id="mainDiv">
+            <div class="imgDiv">
+                <div id="h2Div">
+                    <div class="a">
+                        <p id="h2Time" class="mainTimeFont"></p>
+                    </div>
+                    <div class="mainImgSize" id="b">
+                        <img id="img2" src="../assets/clear-night.svg" alt="Clean Night">
+                    </div>
+                    <div class="a">
+                        <p id="h2Temp" class="mainTempFont"></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrClass">
+            <div class="imgDiv">
+                <div id="h3Div">
+                    <div class="a">
+                        <p id="h3Time" class="mainTimeFont"></p>
+                    </div>
+                    <div class="mainImgSize" id="c">
+                        <img id="img3" src="../assets/clear-night.svg" alt="Clean Night">
+                    </div>
+                    <div class="a">
+                        <p id="h3Temp" class="mainTempFont"></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrClass">
+            <div class="imgDiv">
+                <div id="h4Div">
+                    <div class="a">
+                        <p id="h4Time" class="mainTimeFont"></p>
+                    </div>
+                    <div class="mainImgSize" id="d">
+                        <img id="img4" src="../assets/clear-night.svg" alt="Clean Night">
+                    </div>
+                    <div class="a">
+                        <p id="h4Temp" class="mainTempFont"></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrClass">
+            <div class="imgDiv">
+                <div id="h5Div">
+                    <div class="a">
+                        <p id="h5Time" class="mainTimeFont"></p>
+                    </div>
+                    <div class="mainImgSize" id="e">
+                        <img id="img5" src="../assets/clear-night.svg" alt="Clean Night">
+                    </div>
+                    <div class="a">
+                        <p id="h5Temp" class="mainTempFont"></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrClass">
+            <div class="imgDiv">
+                <div id="h6Div">
+                    <div class="a">
+                        <p id="h6Time" class="mainTimeFont"></p>
+                    </div>
+                    <div class="mainImgSize" id="f">
+                        <img id="img6" src="../assets/clear-night.svg" alt="Clean Night">
+                    </div>
+                    <div class="a">
+                        <p id="h6Temp" class="mainTempFont"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+    <script src="WeatherWebApp.js"></script>
+</body>
+</html>
