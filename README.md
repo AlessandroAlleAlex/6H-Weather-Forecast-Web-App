@@ -12,7 +12,7 @@ let key = "<put your own OpenWehaterMap API key here>";
 ```
 3) If everything is done correctly, this is what you should expect:
 
-<b>Web View<b>
+<b>Web View<b/>
   
 ![](screenshots/web.jpg)
 
@@ -20,11 +20,11 @@ let key = "<put your own OpenWehaterMap API key here>";
   
 ![](screenshots/mobile1.jpg) 
   
-<b>Mobile View: scroll up<b> 
+<b>Mobile View: scroll up<b/> 
   
 ![](screenshots/mobile2.jpg) 
 
-<b>Tablet View<b>
+<b>Tablet View<b/>
   
 ![](screenshots/tablet.jpg)
 
